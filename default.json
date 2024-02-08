@@ -1,0 +1,65 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "enabledManagers": ["npm"],
+  "ignorePaths": [
+    "docker/**",
+    "engines/**",
+    ".github/**",
+    "manager/android",
+    "manager/ios"
+  ],
+  "branchConcurrentLimit": 2,
+  "npm": {
+    "minimumReleaseAge": "7 days"
+  },
+  "extends": [
+    "config:recommended",
+    "docker:disable",
+    ":approveMajorUpdates",
+    ":label(dependencies)",
+    ":maintainLockFilesDisabled"
+  ],
+  "packageRules": [
+    {
+      "groupName": "Grouped @blueprintjs {{commitMessageExtra}}",
+      "matchPackagePrefixes": ["@blueprintjs/"],
+      "additionalBranchPrefix": "{{parentDir}}/",
+      "matchUpdateTypes": ["digest", "patch", "minor"]
+    },
+    {
+      "groupName": "Grouped @types {{commitMessageExtra}}",
+      "matchPackagePrefixes": ["@types/"],
+      "minimumReleaseAge": "30 days",
+      "matchUpdateTypes": ["digest", "patch", "minor"],
+      "enabled": false
+    },
+    {
+      "matchDepTypes": ["dependencies"],
+      "labels": ["dependencies", "run-integration-tests"]
+    },
+    {
+      "matchPackagePatterns": ["cypress"],
+      "labels": ["dependencies", "run-integration-tests"]
+    },
+    {
+      "matchPackagePatterns": ["storybook"],
+      "dependencyDashboardApproval": true,
+      "labels": ["dependencies"]
+    },
+    {
+      "matchPackagePatterns": ["antd", "react"],
+      "additionalBranchPrefix": "{{parentDir}}/",
+      "labels": ["dependencies", "run-integration-tests"]
+    },
+    {
+      "groupName": "Grouped @capacitor {{commitMessageExtra}}",
+      "matchPackagePatterns": ["capacitor"],
+      "labels": ["dependencies", "run-integration-tests"]
+    },
+    {
+      "groupName": "Grouped @apollo/client {{commitMessageExtra}}",
+      "matchPackagePatterns": ["@apollo/client"],
+      "labels": ["dependencies", "run-integration-tests"]
+    }
+  ]
+}
