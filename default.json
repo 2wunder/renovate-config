@@ -8,7 +8,7 @@
     "manager/android",
     "manager/ios"
   ],
-  "branchConcurrentLimit": 2,
+  "branchConcurrentLimit": 3,
   "npm": {
     "minimumReleaseAge": "7 days"
   },
@@ -38,8 +38,18 @@
       "labels": ["dependencies", "run-integration-tests"]
     },
     {
+      "extends": "packages:test",
+      "groupName": "test packages",
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true 
+    },
+    {
       "matchPackagePatterns": ["cypress"],
-      "labels": ["dependencies", "run-integration-tests"]
+      "labels": ["dependencies", "run-integration-tests"],
+      "automerge": true
     },
     {
       "matchPackagePatterns": ["storybook"],
