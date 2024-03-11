@@ -1,10 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "enabledManagers": ["npm"],
+  "enabledManagers": ["npm", "ci"],
   "ignorePaths": [
     "docker/**",
     "engines/**",
-    ".github/**",
     "manager/android",
     "manager/ios"
   ],
