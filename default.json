@@ -70,7 +70,10 @@
     {
       "groupName": "Grouped @capacitor {{commitMessageExtra}}",
       "matchPackagePatterns": ["capacitor"],
-      "labels": ["dependencies", "run-integration-tests"]
+      "labels": ["dependencies", "run-integration-tests"],
+      "schedule": [
+        "every 2 months on the first day of the month"
+      ]    
     },
     {
       "groupName": "Grouped @apollo/client {{commitMessageExtra}}",
