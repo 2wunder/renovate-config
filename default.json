@@ -57,7 +57,14 @@
       "labels": ["dependencies"]
     },
     {
-      "matchPackagePatterns": ["antd", "react"],
+      "matchPackagePatterns": ["antd"],
+      "additionalBranchPrefix": "{{parentDir}}/",
+      "labels": ["dependencies", "run-integration-tests"]
+    },
+    {
+      "matchSourceUrls": [
+        "https://github.com/facebook/react"
+      ],
       "additionalBranchPrefix": "{{parentDir}}/",
       "labels": ["dependencies", "run-integration-tests"]
     },
