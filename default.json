@@ -18,6 +18,12 @@
     ":label(dependencies)",
     ":maintainLockFilesDisabled"
   ],
+  "timezone": "Europe/Berlin",
+  "schedule": [
+    "after 6pm every weekday",
+    "before 7am every weekday",
+    "every weekend"
+  ],
   "packageRules": [
     {
       "groupName": "Grouped @blueprintjs {{commitMessageExtra}}",
