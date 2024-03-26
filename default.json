@@ -86,5 +86,8 @@
       "matchPackagePatterns": ["@apollo/client"],
       "labels": ["dependencies", "run-integration-tests"]
     }
-  ]
+  ],
+  "encrypted": {
+    "npmrc": "wcFMA/xDdHCJBTolAQ//dhs4Jg3U7Cu07ePpBXPcnJCPf19DCu3kZN5CtYuuMc3c8u7zPgM9HuRcGVTGMv3d78hW8CppjBMDq++rW0P5KntfBL+gRepRaAdGTpZ+cIUVns2roG0ipMHnohDZqC7K0eXXI4xNBbTiFwWqkigeHiNG7xiLa6vFPBVQiCnFwzCCEp/d7RYXFXEwMwhhtI3n3ffPsMpqB+z1CPlFS8azCG8pBj6OgiALYf/MxST+mF+p65RyLf2P59JdKlCUW05qdJuw2tB5l82hRebXUpxzsb4zLSE/1JgQR2JQpyT9wK8fByyuXo2bANZh7aoeKJZ/pDqWG108eGkkwpjIDawNjl7lqKvduxcRDYZ8o6Tzpvm8ugleQO7NmaUSK8zUM1Lk9Ws9EhTC6zJ2+zDTq+SqRSJOJSKIqb3MaL4ZuonFnY6rr6N90EtHpRuO4YebCiKY09hoMBjVoqi/GzgzxQLwjgy3ksW8mkOxmX/xU+tBpIQrYu7z+Ky86b+pAJ9KraeSVHFT7NEhaAEqYQcSRUKhB2JxGMAiNbK7hXUe43VgRhKNzw9umy3s7eLMW8oiKYmN9e5ldYwkezRkx3SwqWMwgKrBBO1D9TsUkWHOyLOgh8umMWHsNWGJg5oSBoNZRP2SVefDuW60PvY40qPD93pu4A9d09SRDb7WXa/aXHmWkrTSwAYBpqpdjNS+lSr//MzyD+Oi3U2NvMSiVNwdC/+ibuf39k3OnhD6bvuWogzQvqwToZePoPc4Y5ziVofQtPfiSUyx5sxsnZaCWSHsZDq54LQ48mYP/ZFs6s1kSfDf39G3CM443W+L4KMW8f3Z4sfsJEznwoSIlF6jzZFwBoeN0pYZfbOj5HAb/ZWt1nrtBinMh2edHynsHf7M8UYtiSEbJTwate7neZEYOsI0/x/mbA1JvHPhMSXkroUeq4eB9V/tt2gem7xnKng"
+  }
 }
