@@ -26,17 +26,23 @@
   ],
   "packageRules": [
     {
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch",
+      "excludePackagePatterns": ["antd", "blueprint", "capacitor", "storybook", "apollo", "cypress", "axios", "recharts", "stripe"],
+      "excludePackageNames": ["react", "react-dom"],
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ]
+    },
+    {
       "groupName": "Grouped @blueprintjs {{commitMessageExtra}}",
       "matchPackagePrefixes": ["@blueprintjs/"],
       "additionalBranchPrefix": "{{parentDir}}/",
-      "matchUpdateTypes": ["digest", "patch", "minor"]
-    },
-    {
-      "groupName": "Grouped @types {{commitMessageExtra}}",
-      "matchPackagePrefixes": ["@types/"],
-      "minimumReleaseAge": "30 days",
-      "matchUpdateTypes": ["digest", "patch", "minor"],
-      "enabled": false
+      "matchUpdateTypes": ["digest", "patch"]
     },
     {
       "matchDepTypes": ["dependencies"],
