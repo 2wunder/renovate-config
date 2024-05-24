@@ -91,6 +91,10 @@
       "groupName": "Grouped @apollo/client {{commitMessageExtra}}",
       "matchPackagePatterns": ["@apollo/client"],
       "labels": ["dependencies", "run-integration-tests"]
+    },
+    {
+      "matchPackageNames": ["bootstrap-sass"],
+      "enabled": false
     }
   ],
   "encrypted": {
