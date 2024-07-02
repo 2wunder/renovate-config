@@ -30,6 +30,7 @@
       "groupSlug": "all-minor-patch",
       "excludePackagePatterns": ["antd", "blueprint", "capacitor", "storybook", "apollo", "cypress", "axios", "recharts", "stripe"],
       "excludePackageNames": ["react", "react-dom"],
+      "labels": ["dependencies", "run-integration-tests"],
       "matchPackagePatterns": [
         "*"
       ],
@@ -42,6 +43,7 @@
       "groupName": "Grouped @blueprintjs {{commitMessageExtra}}",
       "matchPackagePrefixes": ["@blueprintjs/"],
       "additionalBranchPrefix": "{{parentDir}}/",
+      "labels": ["dependencies", "run-integration-tests"],
       "matchUpdateTypes": ["digest", "patch"]
     },
     {
@@ -51,6 +53,7 @@
     {
       "extends": "packages:test",
       "groupName": "test packages",
+      "labels": ["dependencies", "run-integration-tests"],
       "matchUpdateTypes": [
         "minor",
         "patch"
