@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "enabledManagers": ["npm", "ci", "node"],
+  "enabledManagers": ["npm", "ci", "node", "github"],
   "ignorePaths": [
     "docker/**",
     "engines/**",
@@ -20,9 +20,7 @@
   ],
   "timezone": "Europe/Berlin",
   "schedule": [
-    "after 6pm every weekday",
-    "before 7am every weekday",
-    "every weekend"
+    "after 6pm every monday"
   ],
   "packageRules": [
     {
