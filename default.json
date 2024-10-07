@@ -38,12 +38,11 @@
       ]
     },
     {
-      "groupName": "Grouped @blueprintjs {{commitMessageExtra}}",
-      "groupSlug": "blueprintjs-to-{{{newVersion}}}",
-      "matchPackagePrefixes": ["@blueprintjs/"],
+      "groupName": "Grouped @blueprintjs",
+      "matchPackagePatterns": ["@blueprintjs"],
       "additionalBranchPrefix": "{{parentDir}}/",
       "labels": ["dependencies", "run-integration-tests"],
-      "matchUpdateTypes": ["digest", "patch"]
+      "matchUpdateTypes": ["minor", "patch"]
     },
     {
       "matchDepTypes": ["dependencies"],
