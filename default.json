@@ -27,7 +27,7 @@
       "groupName": "all non-major dependencies",
       "groupSlug": "all-minor-patch",
       "excludePackagePatterns": ["antd", "blueprint", "capacitor", "storybook", "apollo", "cypress", "axios", "recharts", "stripe"],
-      "excludePackageNames": ["react", "react-dom"],
+      "excludePackageNames": ["react", "react-dom", "klarx-tool"],
       "labels": ["dependencies", "run-integration-tests"],
       "matchPackagePatterns": [
         "*"
