@@ -82,12 +82,12 @@
       "labels": ["dependencies", "run-integration-tests"]
     },
     {
-      "groupName": "Grouped @capacitor {{commitMessageExtra}}",
+      "groupName": "Grouped @capacitor",
       "matchPackagePatterns": ["capacitor"],
       "labels": ["dependencies", "run-integration-tests"],
       "schedule": [
         "every 2 months on the first day of the month"
-      ]    
+      ]
     },
     {
       "groupName": "Grouped @apollo/client {{commitMessageExtra}}",
