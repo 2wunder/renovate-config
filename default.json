@@ -105,6 +105,11 @@
     {
       "matchHost": "github.com",
       "token": "{{ secrets.GITHUB_COM_TOKEN }}"
+    },
+    {
+      "hostType": "npm",
+      "matchHost": "npm.pkg.github.com",
+      "token": "{{ secrets.GITHUB_COM_TOKEN }}"
     }
   ]
 }
