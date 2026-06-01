@@ -98,6 +98,47 @@
     {
       "matchPackageNames": ["bootstrap-sass"],
       "enabled": false
+    },
+    {
+      "description": "pnpm bumps need coordinated manual updates (all packageManager fields, Docker, Semaphore); keep out of grouped minor/patch PRs.",
+      "matchPackageNames": ["pnpm"],
+      "groupName": "pnpm"
+    },
+    {
+      "description": "Node version bumps need coordinated updates (.nvmrc, Docker NODE_VERSION, engines, CI); keep out of grouped minor/patch PRs.",
+      "matchDepNames": ["node"],
+      "matchPackageNames": [
+        "node",
+        "nodejs/node",
+        "/(?:^|/)node$/",
+        "!calico/node",
+        "!kindest/node"
+      ],
+      "groupName": "node"
+    }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Update PNPM_VERSION in Dockerfile",
+      "managerFilePatterns": ["/(^|/)Dockerfile$/"],
+      "matchStrings": [
+        "ENV\\s+PNPM_VERSION\\s+(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+      ],
+      "depNameTemplate": "pnpm",
+      "datasourceTemplate": "npm",
+      "versioningTemplate": "semver"
+    },
+    {
+      "customType": "regex",
+      "description": "Update PNPM_VERSION in Semaphore",
+      "managerFilePatterns": ["/(^|/)\\.semaphore/semaphore\\.yml$/"],
+      "matchStrings": [
+        "name:\\s*PNPM_VERSION\\s*\\n\\s*value:\\s*'(?<currentValue>\\d+\\.\\d+\\.\\d+)'"
+      ],
+      "depNameTemplate": "pnpm",
+      "datasourceTemplate": "npm",
+      "versioningTemplate": "semver"
     }
   ],
   "npmrc": "@2wunder:registry=https://npm.pkg.github.com",
