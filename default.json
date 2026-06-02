@@ -38,6 +38,7 @@
     },
     {
       "groupName": "Grouped @blueprintjs",
+      "groupSlug": "grouped-blueprintjs",
       "matchPackagePatterns": ["@blueprintjs"],
       "additionalBranchPrefix": "{{parentDir}}/",
       "labels": ["dependencies", "run-integration-tests"],
@@ -82,6 +83,7 @@
     },
     {
       "groupName": "Grouped @capacitor",
+      "groupSlug": "grouped-capacitor",
       "matchPackagePatterns": ["capacitor"],
       "labels": ["dependencies", "run-integration-tests"],
       "schedule": [
