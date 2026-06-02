@@ -3,7 +3,6 @@
   "enabledManagers": ["npm", "nvm", "node", "github-actions"],
   "ignorePaths": [
     "docker/**",
-    "engines/**",
     "manager/android",
     "manager/ios"
   ],
