@@ -25,7 +25,7 @@
     {
       "groupName": "all non-major dependencies",
       "groupSlug": "all-minor-patch",
-      "excludePackagePatterns": ["antd", "blueprint", "capacitor", "storybook", "apollo", "cypress", "axios", "recharts", "stripe"],
+      "excludePackagePatterns": ["antd", "blueprint", "capacitor", "storybook", "apollo", "cypress", "axios", "recharts", "stripe", "mastra"],
       "excludePackageNames": ["react", "react-dom", "klarx-tool", "pnpm"],
       "labels": ["dependencies", "run-integration-tests"],
       "matchPackagePatterns": [
@@ -99,6 +99,13 @@
     {
       "matchPackageNames": ["bootstrap-sass"],
       "enabled": false
+    },
+    {
+      "groupName": "Grouped mastra to {{newVersion}}",
+      "groupSlug": "grouped-mastra",
+      "matchPackagePatterns": ["mastra"],
+      "labels": ["dependencies", "run-integration-tests"],
+      "matchUpdateTypes": ["minor", "patch"]
     },
     {
       "description": "pnpm bumps need coordinated manual updates (all packageManager fields, Docker, Semaphore); keep out of grouped minor/patch PRs.",
